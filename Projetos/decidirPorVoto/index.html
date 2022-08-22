@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Qual você prefere?</title>
+        
+    </head>
+
+
+<body>
+
+    <div>
+
+        <h1 class="titulo">Qual é o melhor refrigerante?</h1>
+
+        <div class="card-deck">
+
+            <div class="card border-0">
+                <button class="btn btn-danger centro" onclick="prefiroCoca()"><h1><img class="centro" src="./img/cocaNew.png" width="400px" height="500px"></h1></button>
+                
+                <div class="centro">
+                  <h2 class="secreto" id="votosCoca">Votos: 0</h4>
+                </div>
+            </div>
+
+            <div class="card border-0">
+                <button class="btn btn-primary centro" onclick="prefiroPepsi()"><h1><img class="centro" src="./img/pepsi.png" width="400px" height="500px"></h1></button>
+                
+                <div class="centro">
+                  <h2 class="secreto" id="votosPepsi">Votos: 0</h4>
+                </div>
+              </div>
+    </div>
+
+    <div class="titulo">
+
+        <h2 id="votosTotais" class="centro" onclick="geraRelatorio()">Votos totais: 0</h2>
+
+    </div>
+    
+    <script src="./script.js"></script>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</body>
+
+</html>
