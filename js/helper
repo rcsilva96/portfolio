@@ -1,0 +1,24 @@
+var home = document.getElementById("navHome")
+var projetos = document.getElementById("navProjeto")
+var idioma = document.getElementById("navIdioma")
+
+var ptBR = document.getElementById("dropPT")
+var esVE = document.getElementById("dropES")
+var enUS = document.getElementById("dropEN")
+var zhTW = document.getElementById("dropZH")
+var jpJP = document.getElementById("dropJP")
+
+var darkMode = document.getElementById("navTema")
+
+var nomeRenato = document.getElementById("titRenato")
+var descRenato = document.getElementById("descRenato")
+
+var titProjeto = docuemnt.getElementById("titProjetos")
+
+var titContato = document.getElementById("titContato")
+var userName = document.getElementById("lblNome")
+var userEmail = document.getElementById("lblEmail")
+var userText = document.getElementById("lblMsg")
+var userSend = document.getElementById("btnEnviar")
+
+home.innerText = "Página de inicio"

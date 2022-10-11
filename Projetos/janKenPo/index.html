@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Ken Po</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+
+    <br><br>
+    
+    <div class="container">
+
+        <h1 class="title centraliza">Pedra, papel e tesoura</h1>
+
+        <div class="columns">
+
+            <div class="column centraliza">
+
+                <h3 class="title is-3">Você</h3>
+
+                <img id="optJogador" src="./img/pedra.png">
+
+            </div>
+
+            <div class="column centraliza">
+
+                <h3 class="title is-3">Computador</h3>
+
+                <img id="optCPU" src="./img/papel.png">
+
+            </div>
+    
+        </div>
+    
+        <div class="centraliza">
+            <a href="#" onclick="jogaPedra()"><img src="./img/pedra.png" width="128" height="128"></img></a>
+            <a href="#" onclick="jogaPapel()"><img src="./img/papel.png" width="128" height="128"></img></a>
+            <a href="#" onclick="jogaTesoura()"><img src="./img/tesoura.png" width="128" height="128"></img></a>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
