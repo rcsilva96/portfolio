@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de hospital</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="">
+
+        <div class="centro muitoAlto" id="pacienteAtual">
+
+            <h1 class="title is-3 centro">Próximo da fila: </h1>
+            <h1 class="title is-1 centro" id="proximoFila"></h1>
+            <h1 class="title is-1 centro" id="txtUrgente"></h1>
+
+        </div>
+
+        <hr>
+
+        <div class="centro alto" id="proximosPacientes">
+
+            <h1 class="centro title is-3">Nomes na fila: </h1>
+            <h1 class="centro title is-1" id="filaPacientes"></h1>
+
+        </div>
+
+        <hr>
+
+
+    </div>
+
+    <div id="botoesControle" class="centro muitoAlto">
+
+        <button onclick="chamaProximo()" class="button is-success is-large">Chamar Próximo</button>
+        <button onclick="cadastroPaciente()" class="button is-info is-large">Cadastrar paciente</button>
+        <a href="./medicamento.html" target="_blank"><button class="button is-link is-large">Controle de medicamento</button></a>
+
+    </div>    
+
+
+
+</body>
+
+</html>
