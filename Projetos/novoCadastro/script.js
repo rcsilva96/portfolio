@@ -62,6 +62,7 @@ function addEstoque() {
 
 function chamaProximo(){
     fundoPadrao()
+    document.getElementById('txtUrgente').innerHTML = "ESTE É UM CASO URGENTE!"
     filaEspera.shift()
     document.getElementById('proximoFila').innerHTML = filaEspera[0];
     filaAndou()
