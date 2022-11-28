@@ -3,7 +3,6 @@ let qtdeMedicamentoEstoque, qtdeMedicamentoLevado
 let seletor = 0
 let filaEspera = ['', ]
 
-const alertaSom = new Audio('audio.mp3')
 
 function cadastroPaciente() {
     nomePaciente = prompt("Insira o nome do paciente.")
@@ -18,7 +17,6 @@ function cadastroPaciente() {
 function adicionaFila() {
     if (vezesMedico > 5) {
         fundoEmergencia()
-        alertaSom.play()
 
         filaEspera.shift()
         filaEspera.unshift(nomePaciente)
