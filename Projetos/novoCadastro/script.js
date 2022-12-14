@@ -2,6 +2,8 @@ let nomePaciente, idadePaciente, vezesMedico
 let qtdeMedicamentoEstoque, qtdeMedicamentoLevado
 let seletor = 0
 let filaEspera = ['', ]
+let nomeDoutor1, nomeDoutor2, nomeDoutor3, nomeDoutor4
+let especialidade1, especialidade2, especialidade3, especialidade4
 
 
 function cadastroPaciente() {
@@ -60,12 +62,80 @@ function addEstoque() {
     document.getElementById('qtdeRemedio').innerHTML = qtdeMedicamentoEstoque
 }
 
-function chamaProximo(){
+function inicializaSala1(){
+
+    nomeDoutor1 = prompt("Bem-vindo profissional da saúde! Qual é o seu nome?")
+    especialidade1 = prompt("Qual sua especialidade?")
+
+
+}
+
+function inicializaSala2(){
+
+    nomeDoutor2 = prompt("Bem-vindo profissional da saúde! Qual é o seu nome?")
+    especialidade2 = prompt("Qual sua especialidade?")
+
+
+}
+
+function inicializaSala3(){
+
+    nomeDoutor3 = prompt("Bem-vindo profissional da saúde! Qual é o seu nome?")
+    especialidade3 = prompt("Qual sua especialidade?")
+
+
+}
+
+function inicializaSala4(){
+
+    nomeDoutor4 = prompt("Bem-vindo profissional da saúde! Qual é o seu nome?")
+    especialidade4 = prompt("Qual sua especialidade?")
+
+
+}
+
+function chamaSala1(){
+
     fundoPadrao()
-    document.getElementById('txtUrgente').innerHTML = "ESTE É UM CASO URGENTE!"
     filaEspera.shift()
     document.getElementById('proximoFila').innerHTML = filaEspera[0];
+    document.getElementById('proximoConsultorio').innerHTML = '<h1 class="title is-1 centro" id="proximoConsultorio">Sala 1</h1>'
+    document.getElementById('txtEspecialidade').innerText = "Dr. " + nomeDoutor1 + " - " + especialidade1
     filaAndou()
+
+}
+
+function chamaSala2(){
+
+    fundoPadrao()
+    filaEspera.shift()
+    document.getElementById('proximoFila').innerHTML = filaEspera[0];
+    document.getElementById('proximoConsultorio').innerHTML = '<h1 class="title is-1 centro" id="proximoConsultorio">Sala 2</h1>'
+    document.getElementById('txtEspecialidade').innerText = "Dr. " + nomeDoutor2 + " - " + especialidade2
+    filaAndou()
+
+}
+
+function chamaSala3(){
+
+    fundoPadrao()
+    filaEspera.shift()
+    document.getElementById('proximoFila').innerHTML = filaEspera[0];
+    document.getElementById('proximoConsultorio').innerHTML = '<h1 class="title is-1 centro" id="proximoConsultorio">Sala 3</h1>'
+    document.getElementById('txtEspecialidade').innerText = "Dr. " + nomeDoutor3 + " - " + especialidade3
+    filaAndou()
+
+}
+
+function chamaSala4(){
+
+    fundoPadrao()
+    filaEspera.shift()
+    document.getElementById('proximoFila').innerHTML = filaEspera[0];
+    document.getElementById('proximoConsultorio').innerHTML = '<h1 class="title is-1 centro" id="proximoConsultorio">Sala 4</h1>'
+    document.getElementById('txtEspecialidade').innerText = "Dr. " + nomeDoutor4 + " - " + especialidade4
+    filaAndou()
+
 }
 
 function removeFila() {
@@ -106,4 +176,12 @@ function fundoPadrao(){
             break
         }
     }
+}*/
+
+/*function chamaProximo(){
+    fundoPadrao()
+    document.getElementById('txtUrgente').innerHTML = "ESTE É UM CASO URGENTE!"
+    filaEspera.shift()
+    document.getElementById('proximoFila').innerHTML = filaEspera[0];
+    filaAndou()
 }*/

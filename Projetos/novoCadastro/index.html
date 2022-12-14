@@ -13,13 +13,26 @@
 
 <body>
 
-    <div class="">
+    <div 
 
-        <div class="centro muitoAlto" id="pacienteAtual">
+        <div class="columns">
 
-            <h1 class="title is-3 centro">Próximo da fila: </h1>
-            <h1 class="title is-1 centro" id="proximoFila"></h1>
-            <h1 class="title is-1 centro" id="txtUrgente"></h1>
+
+            <div class="centro muitoAlto column is-9" id="pacienteAtual">
+
+                <h1 class="title is-3 centro">Próximo da fila: </h1>
+                <h1 class="title is-1 centro" id="proximoFila"></h1>
+                <h1 class="title is-1 centro" id="txtUrgente"></h1>
+    
+            </div>
+
+            <div class="centro muitoAlto column is-3" id="consultorioMedico">
+
+                <h1 class="title is-3 centro">Consultório: </h1>
+                <h1 class="title is-1 centro" id="proximoConsultorio"></h1>
+                <h1 class="title is-2 centro" id="txtEspecialidade"></h1>
+
+            </div>
 
         </div>
 
@@ -39,9 +52,30 @@
 
     <div id="botoesControle" class="centro muitoAlto">
 
-        <button onclick="chamaProximo()" class="button is-success is-large">Chamar Próximo</button>
+        <!-- <button onclick="chamaProximo()" class="button is-success is-large">Chamar Próximo</button> -->
         <button onclick="cadastroPaciente()" class="button is-info is-large">Cadastrar paciente</button>
         <a href="./medicamento.html" target="_blank"><button class="button is-link is-large">Controle de medicamento</button></a>
+
+        <br>
+
+        <button onclick="inicializaSala1()">Inicializa Sala 1</button>
+        <button onclick="inicializaSala2()">Inicializa Sala 2</button>
+        <button onclick="inicializaSala3()">Inicializa Sala 3</button>
+        <button onclick="inicializaSala4()">Inicializa Sala 4</button>
+
+        <br><br>
+
+        <button onclick="chamaSala1()">Chamar na Sala 1</button>
+        <button onclick="chamaSala2()">Chamar na Sala 2</button>
+        <button onclick="chamaSala3()">Chamar na Sala 3</button>
+        <button onclick="chamaSala4()">Chamar na Sala 4</button>
+
+        <br><br>
+
+        <a href="./consultorios/sala1.htm" target="_blank"><button>Abrir sala 1</button></a>
+        <a href="./consultorios/sala1.htm" target="_blank"><button>Abrir sala 1</button></a>
+        <a href="./consultorios/sala1.htm" target="_blank"><button>Abrir sala 1</button></a>
+        <a href="./consultorios/sala1.htm" target="_blank"><button>Abrir sala 1</button></a>
 
     </div>    
 
