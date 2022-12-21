@@ -2,6 +2,22 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dark-mode {
+    filter:invert(1) hue-rotate(180deg);
+}
+
+.dark-mode img{
+    filter:invert(1) hue-rotate(180deg);
+}
+
+.dark-mode body{
+    filter:invert(1) hue-rotate(180deg);
+}
+
 .cardContainer{
     height: 100vh;  
     /*alinhando*/

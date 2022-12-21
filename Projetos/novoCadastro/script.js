@@ -153,35 +153,5 @@ function fundoEmergencia(){
 
 function fundoPadrao(){
     document.getElementById('pacienteAtual').style.backgroundColor = "black"
+    document.getElementById('txtUrgente').innerHTML = ""
 }
-
-
-/*function menu() {
-    seletor = prompt("Selecione a opção desejada: \n 1 - Cadastro de pacientes \n 2 - Controle de estoque \n 3 - Dar remédio ao paciente \n 4 - Retirar o próximo paciente da fila \n 0 - Encerrar o sistema")
-
-    while (seletor != 5) {
-        if (seletor == 1) {
-            cadastroPaciente()
-            menu()
-        } else if (seletor == 2) {
-            addEstoque()
-            menu()
-        } else if (seletor == 3) {
-            checaEstoque()
-        } else if (seletor == 4) {
-            removeFila()
-            menu()
-        } else if (seletor == 0) {
-            console.log("Encerrando o sistema.")
-            break
-        }
-    }
-}*/
-
-/*function chamaProximo(){
-    fundoPadrao()
-    document.getElementById('txtUrgente').innerHTML = "ESTE É UM CASO URGENTE!"
-    filaEspera.shift()
-    document.getElementById('proximoFila').innerHTML = filaEspera[0];
-    filaAndou()
-}*/

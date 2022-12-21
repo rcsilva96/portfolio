@@ -3,197 +3,213 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renato C. Silva</title>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.css">
-    <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renato C. Silva</title>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
-    
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+<body onload="addDarkmodeWidget()">
+
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+
+    <div id="navbarBasicExample" class="navbar-menu">
+
+      <div id="navbarBasicExample" class="navbar-menu">
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+
+        <div class="navbar-start">
+          <a class="navbar-item" id="navHome" href="#inicio">
+            Página inicial
           </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" id="navHome" href="#inicio">
-              Página inicial
-            </a>
-      
-            <a class="navbar-item" id="navProjeto" href="#projetos">
-              Projetos
+
+          <a class="navbar-item" id="navProjeto" href="#projetos">
+            Projetos
+          </a>
+
+          <a class="navbar-item" id="navContato" href="#contato">
+            Contato
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" id="navIdioma">
+              <img src="./img/icons/lingua.png">
             </a>
 
-            <a class="navbar-item" id="navContato" href="#contato">
-                Contato
+            <div class="navbar-dropdown" onclick="linguaPortugues()">
+              <a class="navbar-item" id="dropPT" disabled>
+                <img src="./img/flags/br.png"> Português
               </a>
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" id="navIdioma">
-                Idioma
+              <a class="navbar-item" id="dropES" onclick="linguaEspanhol()">
+                <img src="./img/flags/es.png"> Espanhol
               </a>
-      
-              <div class="navbar-dropdown" onclick="linguaPortugues()" >
-                <a class="navbar-item" id="dropPT">
-                    <img src="./img/flags/br.png"> Português   
-                </a>
-                <a class="navbar-item" id="dropES" onclick="linguaEspanhol()" >
-                    <img src="./img/flags/es.png"> Espanhol
-                </a>
-                <a class="navbar-item" id="dropEN" onclick="linguaIngles()" >
-                    <img src="./img/flags/gb.png"> Inglês
-                </a>
-                <a class="navbar-item" id="dropZH" onclick="linguaMandarim()" >
-                    <img src="./img/flags/tw.png"> Mandarim
-                </a>
-                <a class="navbar-item" id="dropJP" onclick="linguaJapones()" >
-                    <img src="./img/flags/jp.png"> Japonês
-                </a>
-              </div>
-            </div>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary" onclick="nextVersion()">
-                  <strong id="navTema">Tema claro</strong>
-                </a>
-              </div>
+              <a class="navbar-item" id="dropEN" onclick="linguaIngles()">
+                <img src="./img/flags/gb.png"> Inglês
+              </a>
+              <a class="navbar-item" id="dropZH" onclick="linguaMandarim()">
+                <img src="./img/flags/tw.png"> Mandarim
+              </a>
+              <a class="navbar-item" id="dropJP" onclick="linguaJapones()">
+                <img src="./img/flags/jp.png"> Japonês
+              </a>
             </div>
           </div>
         </div>
-    </nav>
 
-    <section class="container" id="inicio">
-        
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button" id="btnSwitch" onclick="temaEscuro()">
+                <img src="./img/icons/switchTheme.png">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <section class="container" id="inicio">
+
     <div class="cardContainer">
       <div class="cardMiddle">
         <div class="columns">
           <div class="column is-one-quarter-desktop">
-              <figure class="image"><img class="is-3by4" src="./img/imgRenatoNew.png"></figure></div>
+            <figure class="image"><img class="is-3by4" src="./img/imgRenatoNew.png"></figure>
+          </div>
           <div class="column">
-              <h1 class="title is-1 has-text-centered" id="titRenato">Renato Silva</h1>
-              <br><br>
-              <p class="has-text-centered" id="descRenato">Renato estuda sozinho, por meio de livros e videos na internet para ser programador full-stack. Entre seus conhecimentos está o desenvolvimento e programação em HTML, CSS, JavaScript e atualmente está estudando node.js, Angular e react native.
-  
-                  Além disso, é formado eletricista de manutenção e engenheiro eletricista e também fala Português, Espanhol, Inglês e estuda Mandarim e Japonês.</p>
+            <h1 class="title is-1 has-text-centered" id="titRenato">Renato Silva</h1>
+            <br><br>
+            <p class="has-text-centered" id="descRenato">Renato estuda sozinho, por meio de livros e videos na internet
+              para ser programador full-stack. Entre seus conhecimentos está o desenvolvimento e programação em HTML,
+              CSS, JavaScript e atualmente está estudando node.js, Angular e react native.
+
+              Além disso, é formado eletricista de manutenção e engenheiro eletricista e também fala Português,
+              Espanhol, Inglês e estuda Mandarim e Japonês.</p>
           </div>
+        </div>
       </div>
+
+  </section>
+
+  <section id="projetos" class="container">
+
+    <h1 class="title is-1 has-text-centered" id="titProjetos">Meus projetos</h1>
+
+    <div class="columns is-centered">
+      <div class="column is-one-quarter cardContainer">
+
+        <!-- Your card code: -->
+        <div class="card is-centered">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./img/demoProj/decideVoto.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="has-text-centered">Decidir por voto
+                <br>
+                <a href="./Projetos/decidirPorVoto/index.html" target="_blank">Acessar</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-one-quarter cardContainer">
+
+        <!-- Your card code: -->
+        <div class="card is-centered">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./img/demoProj/jokenpo.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="has-text-centered">Jo Ken Po
+                <br>
+                <a href="./Projetos/janKenPo/index.html" target="_blank">Acessar</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="column is-one-quarter cardContainer">
+
+        <!-- Your card code: -->
+        <div class="card is-centered">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./img/demoProj/landingPage.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="has-text-centered">Landing Page CCXP
+                <br>
+                <a href="./Projetos/projCCXP/index.html" target="_blank">Acessar</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="column is-one-quarter cardContainer">
+
+        <!-- Your card code: -->
+        <div class="card is-centered">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./img/demoProj/hospital.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="has-text-centered">Sistema para hospital
+                <br>
+                <a href="./Projetos/novoCadastro/index.html" target="_blank">Acessar</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-      
-    </section>
 
-    <section id="projetos" class="container">
+  </section>
 
-      <h1 class="title is-1 has-text-centered" id="titProjetos">Meus projetos</h1>
+  <section class="container" id="contato">
 
-      <div class="columns is-centered">
-        <div class="column is-one-quarter cardContainer">
-      
-          <!-- Your card code: --> 
-          <div class="card is-centered">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="./img/demoProj/decideVoto.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                  <p class="has-text-centered">Decidir por voto
-                  <br>
-                  <a href="./Projetos/decidirPorVoto/index.html" target="_blank">Acessar</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <h1 class="title is-1 has-text-centered" id="titContato">Entre em contato</h1>
 
-        <div class="column is-one-quarter cardContainer">
-      
-          <!-- Your card code: --> 
-          <div class="card is-centered">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="./img/demoProj/jokenpo.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                  <p class="has-text-centered">Jo Ken Po
-                  <br>
-                  <a href="./Projetos/janKenPo/index.html" target="_blank">Acessar</a></p>
-              </div>
-            </div>
-          </div>
-      
-        </div>
+    <br><br>
 
-        <div class="column is-one-quarter cardContainer">
-      
-          <!-- Your card code: --> 
-          <div class="card is-centered">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="./img/demoProj/landingPage.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                  <p class="has-text-centered">Landing Page CCXP
-                  <br>
-                  <a href="./Projetos/projCCXP/index.html" target="_blank">Acessar</a></p>
-              </div>
-            </div>
-          </div>
-      
-        </div>
-
-        <!--<div class="column is-one-quarter cardContainer">
-          <div class="card is-centered">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="./img/demoProj/hospital.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                  <p class="has-text-centered">Controle de fila para hospital
-                  <br>
-                  <a href="./Projetos/novoCadastro/index.html" target="_blank">Acessar</a></p>
-              </div>
-            </div>
-          </div>
-      
-        </div>-->
-
-      </div>
-
-    </section>
-
-    <section class="container" id="contato">
-
-      <h1 class="title is-1 has-text-centered" id="titContato">Entre em contato</h1>
-
-      <br><br>
-
-      <div class="columns">
-        <div class="column"><div class="field">
+    <div class="columns">
+      <div class="column">
+        <div class="field">
           <label class="label" id="lblNome">Nome</label>
           <div class="control">
             <input class="input" type="text" placeholder="Seu nome">
           </div>
         </div>
-        
+
         <div class="field">
           <label class="label" id="lblEmail">Email</label>
           <div class="control has-icons-left">
@@ -203,35 +219,38 @@
             </span>
           </div>
         </div>
-        
+
         <div class="field">
           <label class="label" id="lblMsg">Mensagem</label>
           <div class="control">
             <textarea class="textarea" placeholder="Escreva sua mensagem"></textarea>
           </div>
         </div>
-        
+
         <div class="field is-grouped">
           <div class="control">
             <button class="button is-link" id="btnEnviar" onclick="nextVersion()">Enviar</button>
           </div>
         </div>
-  </div>
-        <div class="column">
-
-            <div class="containerSocial ">
-              <a href="mailto:rsilv1822@gmail.com"><img width="128" height="128" src="./img/icons/email.png"></a>
-              <a href="https://www.instagram.com/rcsilva96/"><img width="128" height="128" src="./img/icons/instagram.png"></a>
-              <a href="https://br.linkedin.com/in/silva-renato-carvalho"><img width="128" height="128" src="./img/icons/linkedin.png"></a>
-            </div>
-
-        </div>
       </div>
+      <div class="column">
 
-    </section>
+        <div class="containerSocial ">
+          <a href="mailto:rsilv1822@gmail.com"><img width="128" height="128" src="./img/icons/email.png"></a>
+          <a href="https://www.instagram.com/rcsilva96/"><img width="128" height="128"
+              src="./img/icons/instagram.png"></a>
+          <a href="https://br.linkedin.com/in/silva-renato-carvalho"><img width="128" height="128"
+              src="./img/icons/linkedin.png"></a>
+        </div>
 
-    <script src="./js/script.js"></script>
-    <script src="./js/mudaIdioma.js"></script>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/mudaIdioma.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 </body>
 
 </html>
